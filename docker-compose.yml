@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "5672"
+      - "15672"
+
+  consumer:
+    image: ${DOCKER_REGISTRY-}consumer
+    build:
+      context: .
+      dockerfile: consumer/Dockerfile
+
+  consumer_2:
+    image: ${DOCKER_REGISTRY-}consumer
+    build:
+      context: .
+      dockerfile: consumer/Dockerfile
+
+  producer:
+    image: ${DOCKER_REGISTRY-}producer
+    build:
+      context: .
+      dockerfile: producer/Dockerfile
+
+
+  anotherconsumer:
+    image: ${DOCKER_REGISTRY-}anotherconsumer
+    build:
+      context: .
+      dockerfile: AnotherConsumer/Dockerfile
+

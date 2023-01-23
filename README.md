@@ -9,7 +9,7 @@ MassTransit is an open-source service bus framework for .NET. It allows for the 
 ------------
 Solution 
 ------------
-![](/docs/solution-folders.png)
+![](https://raw.githubusercontent.com/cleberMargarida/massTransit-rabbitmq/master/docs/solution-folders.png)
 
 ## Producer
 The producer was configured to use RabbitMQ as the transport and to register a hosted service to generate messages for each second, in an ASP.NET Core application.
@@ -137,7 +137,7 @@ Design
 -----------
 The way masstransit is configured, the system will behave as follows.
 
-![](/docs/docker-compose-orchestration.png)
+![](https://raw.githubusercontent.com/cleberMargarida/massTransit-rabbitmq/master/docs/docker-compose-orchestration.png)
 
 * The publisher will publish every second messages for the type Message
 

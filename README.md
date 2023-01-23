@@ -139,7 +139,7 @@ The way masstransit is configured, the system will behave as follows.
 
 ![](/docs/docker-compose-orchestration.png)
 
-* The publisher will publish every minute messages for the type Message
+* The publisher will publish every second messages for the type Message
 
 * RabbitMQ will distribute the messages
 
